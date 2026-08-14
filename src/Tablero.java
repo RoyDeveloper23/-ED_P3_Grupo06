@@ -101,6 +101,16 @@ public class Tablero {
     public boolean estaLLeno(){
         return !celdas.contains('-');
     }
+    
+    public void imprimirTablero() {
+        for (int i = 0; i < 9; i++) {
+            System.out.print(celdas.get(i) + " ");
+            if ((i + 1) % 3 == 0) {
+                System.out.println();
+            }
+        }
+        System.out.println("------");
+    }
 
 
 }
