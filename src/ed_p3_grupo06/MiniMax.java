@@ -70,7 +70,7 @@ public class MiniMax {
 
         if (memoriaDeTableros.containsKey(fotoDelTablero)) {
             return memoriaDeTableros.get(fotoDelTablero); 
-
+        }
         // 3. Si es un tablero nuevo que nunca había visto, hace el cálculo matemático completo
         int utilidadCalculada = tablero.calcularUtilidad(simboloComputadora);
         
@@ -78,7 +78,8 @@ public class MiniMax {
         memoriaDeTableros.put(fotoDelTablero, utilidadCalculada);
         
         return utilidadCalculada;
+        
     }
-}
+}    
     
  

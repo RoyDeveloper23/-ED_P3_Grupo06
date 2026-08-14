@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package ed_p3_grupo06;
-
 /**
  *
  * @author fcamp
@@ -30,7 +29,7 @@ public class ArbolNario {
         
         Tablero tableroPadre = nodoPadre.getEstado();
         
-        if (profundidad == 0 || tableroPadre.hayGanador('X') || tableroPadre.hayGanador('O') || tableroPadre.estaLleno()) { // Por ahora el metodo hay ganador y esta lleno son abstractos
+        if (profundidad == 0 || tableroPadre.hayGanador('X') || tableroPadre.hayGanador('O') || tableroPadre.estaLleno()) { 
         return;
         }
 
@@ -55,7 +54,7 @@ public class ArbolNario {
                 nuevoHijo.setFilaJugada(fila);
                 nuevoHijo.setColJugada(col);
 
-                //
+                
                 nodoPadre.agregarHijo(nuevoHijo);
 
                 //La llamada recursiva

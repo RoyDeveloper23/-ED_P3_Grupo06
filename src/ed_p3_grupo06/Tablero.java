@@ -98,7 +98,7 @@ public class Tablero {
         return hayGanador('X') || hayGanador('O');
     }
 
-    public boolean estaLLeno(){
+    public boolean estaLleno(){
         return !celdas.contains('-');
     }
     
@@ -111,6 +111,7 @@ public class Tablero {
         }
         System.out.println("------");
     }
+
 
 
 }
