@@ -1,5 +1,4 @@
 
-package proyectoprueba;
 
 
 import java.util.HashMap;
