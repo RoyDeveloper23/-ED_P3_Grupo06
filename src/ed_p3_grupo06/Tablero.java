@@ -53,6 +53,12 @@ public class Tablero {
     
     public int calcularUtilidad(char jugadorTurno) {
         char oponente = (jugadorTurno == 'X') ? 'O' : 'X';
+        if (hayGanador(jugadorTurno)) {
+            return 100;
+        }                                                                   
+        if (hayGanador(oponente)) {
+            return -100; 
+        }
         int pJugador = contarLineasDisponibles(jugadorTurno, oponente);
         int pOponente = contarLineasDisponibles(oponente, jugadorTurno);
         return pJugador - pOponente; 
