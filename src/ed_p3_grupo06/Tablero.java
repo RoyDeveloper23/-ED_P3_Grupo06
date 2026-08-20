@@ -25,6 +25,17 @@ public class Tablero {
     private Tablero(List<Character> celdasCopia) {
         this.celdas = new ArrayList<>(celdasCopia);
     }
+
+    public class Jugada{
+        public int index;
+        public char simbol;
+
+        public Jugada(int index, char simbol){
+            this.index = index;
+            this.simbol = simbol;
+        }
+    }
+    
     
     // Método para realizar una jugada
     public boolean hacerJugada(int fila, int col, char simbolo) { 
@@ -35,6 +46,16 @@ public class Tablero {
             return true; 
         }
         return false; 
+    }
+
+    // Método exclusivo para guardar el historial real
+    public void registrarJugadaHistorial(int fila, int col, char simbolo) {
+        int indice = (fila * 3) + col;
+        historialReal.offer(new Jugada(indice, simbolo));
+    }
+
+    public Queue<Jugada> getHistorialReal() {
+        return historialReal;
     }
     
     public Tablero clonar() {
